@@ -36,10 +36,8 @@ npm install
 
 1. Edit source files (`extension.js`, `stylesheet.css`, etc.)
 2. Run `npm run pack:install` to package and install
-3. Restart GNOME Shell:
-   - **X11:** Press `Alt+F2`, type `r`, press Enter
-   - **Wayland:** Log out and log back in
-4. Run `npm run enable` if needed
+3. Run `npm run enable` to enable the extension
+4. Run `npm run dev` to open a wayland based gnome test
 5. Use `npm run logs` in a separate terminal to watch for errors
 
 ### Debugging

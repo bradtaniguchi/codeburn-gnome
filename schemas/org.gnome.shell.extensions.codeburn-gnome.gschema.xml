@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.codeburn-gnome"
+          path="/org/gnome/shell/extensions/codeburn-gnome/">
+
+    <key name="refresh-interval" type="i">
+      <default>60</default>
+      <summary>Refresh interval (seconds)</summary>
+      <description>
+        How often to query the codeburn CLI for updated metrics, in seconds.
+        Range: 10–3600.
+      </description>
+    </key>
+
+    <key name="show-calls" type="b">
+      <default>true</default>
+      <summary>Show call count in panel label</summary>
+      <description>
+        When enabled the panel label shows "$1.63 / 184 calls".
+        When disabled it shows only "$1.63".
+      </description>
+    </key>
+
+    <key name="codeburn-path" type="s">
+      <default>""</default>
+      <summary>Path to codeburn binary</summary>
+      <description>
+        Absolute path to the codeburn executable (e.g. /home/user/.nvm/versions/node/v24/bin/codeburn).
+        Leave empty to resolve "codeburn" from the system PATH.
+      </description>
+    </key>
+
+    <key name="provider-filter" type="s">
+      <default>""</default>
+      <summary>Provider filter</summary>
+      <description>
+        Filter metrics by provider name (e.g. "claude", "copilot", "gemini").
+        Leave empty to include all providers.
+      </description>
+    </key>
+
+  </schema>
+</schemalist>

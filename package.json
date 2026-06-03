@@ -1,11 +1,14 @@
 {
   "name": "codeburn-gnome",
   "version": "1.0.0",
+  "type": "module",
   "description": "GNOME shell extension that surfaces the CLI tool codeburn, for usage metrics",
   "scripts": {
-    "pack": "gnome-extensions pack --force .",
+    "compile-schemas": "glib-compile-schemas schemas/",
+    "pack": "npm run compile-schemas && gnome-extensions pack --force .",
     "ext:install": "gnome-extensions install --force codeburn-gnome@bradtaniguchi.github.io.shell-extension.zip",
     "pack:install": "npm run pack && npm run ext:install",
+    "dev": "dbus-run-session -- gnome-shell --devkit",    
     "enable": "gnome-extensions enable codeburn-gnome@bradtaniguchi.github.io",
     "disable": "gnome-extensions disable codeburn-gnome@bradtaniguchi.github.io",
     "logs": "journalctl -f -o cat /usr/bin/gnome-shell",
