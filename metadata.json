@@ -1,0 +1,8 @@
+{
+  "name": "codeburn-gnome",
+  "description": "GNOME shell extension that surfaces the CLI tool codeburn, for usage metrics",
+  "uuid": "codeburn-gnome@bradtaniguchi.github.io",
+  "shell-version": [
+    "50"
+  ]
+}
