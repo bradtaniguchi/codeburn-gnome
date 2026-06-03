@@ -1,0 +1,19 @@
+{
+  "name": "codeburn-gnome",
+  "version": "1.0.0",
+  "description": "GNOME shell extension that surfaces the CLI tool codeburn, for usage metrics",
+  "scripts": {
+    "pack": "gnome-extensions pack --force .",
+    "ext:install": "gnome-extensions install --force codeburn-gnome@bradtaniguchi.github.io.shell-extension.zip",
+    "pack:install": "npm run pack && npm run ext:install",
+    "enable": "gnome-extensions enable codeburn-gnome@bradtaniguchi.github.io",
+    "disable": "gnome-extensions disable codeburn-gnome@bradtaniguchi.github.io",
+    "logs": "journalctl -f -o cat /usr/bin/gnome-shell",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "eslint": "^9.0.0"
+  }
+}
