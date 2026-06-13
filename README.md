@@ -18,12 +18,12 @@ npm run enable
 
 For detailed contribution guidelines, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
-## Note
+## TODOs:
 
-My laptop **just** broke due to SSD failure right after building this extension, so I can't work on it anymore until its fixed 🤷‍♂️ . But this **somewhat works** but it wasn't finished beyond being able to be tested. Still left over:
+Below are things I'm still working on, I had some issues with my laptop but its now back up and running so hoping to get these in.
 
-- configuration of what is shown
-- better docs/experience on if `codeburn` is not installed
-- better documentation in the repo
-- deployment to gnome extensions
-- documentation of alternatives for other tools. 
+- [ ] configuration of what is shown
+- [ ] better docs/experience on if `codeburn` is not installed
+- [ ] better documentation in the repo
+- [ ] deployment to gnome extensions
+- [ ] documentation of alternatives for other tools. 
