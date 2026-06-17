@@ -79,3 +79,22 @@ For testing and debugging purposes, the project provides a development environme
 ## Questions?
 
 If you have questions or need help getting started, please open an issue before starting work on a larger feature.
+
+## FAQs
+
+### Why don't I see my extension when running `npm run dev`?
+
+If the nested shell starts but your extension is missing, check the following:
+
+- **It isn't installed**: Run `npm run pack:install` first to ensure the code is in `~/.local/share/gnome-shell/extensions/`.
+- **It isn't enabled**: Even if installed, it might be disabled in the new session. You can try running `npm run enable` or using the Extensions app.
+- **Errors during startup**: Check the logs with `npm run logs` to see if the extension crashed during initialization.
+
+### What packages are required for `npm run dev`?
+
+To use the development environment and build tools, you generally need:
+
+- **GNOME Shell 47+**: Required for the `--devkit` flag.
+- **dbus-run-session**: Usually found in `dbus-x11` or `dbus-daemon` packages.
+- **glib-compile-schemas**: Found in `libglib2.0-dev` or `glib2-devel`.
+- **mutter-dev-bin**: Often required for nested compositor support and development headers.
