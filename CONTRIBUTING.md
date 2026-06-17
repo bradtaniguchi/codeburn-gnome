@@ -68,6 +68,10 @@ To automatically fix some issues:
 npm run lint:fix
 ```
 
+## Licensing
+
+By contributing to this project, you agree that your contributions will be licensed under the [GNU General Public License v3.0 or later](./LICENSE).
+
 ## Development Environment
 
 For testing and debugging purposes, the project provides a development environment that opens a wayland based GNOME instance. This is useful for seeing your changes in action during development.
