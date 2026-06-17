@@ -9,7 +9,7 @@
     "pack": "npm run compile-schemas && gnome-extensions pack --force .",
     "ext:install": "gnome-extensions install --force codeburn-gnome@bradtaniguchi.github.io.shell-extension.zip",
     "pack:install": "npm run pack && npm run ext:install",
-    "dev": "dbus-run-session -- gnome-shell --devkit",    
+    "dev": "dbus-run-session -- sh -c \"gnome-shell --devkit & sleep 2 && gnome-extensions enable codeburn-gnome@bradtaniguchi.github.io; wait\"",    
     "enable": "gnome-extensions enable codeburn-gnome@bradtaniguchi.github.io",
     "disable": "gnome-extensions disable codeburn-gnome@bradtaniguchi.github.io",
     "logs": "journalctl -f -o cat /usr/bin/gnome-shell",
