@@ -5,11 +5,14 @@
   "description": "GNOME shell extension that surfaces the CLI tool codeburn, for usage metrics",
   "license": "GPL-3.0-or-later",
   "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch",
+    "typecheck": "tsc --noEmit",
     "compile-schemas": "glib-compile-schemas schemas/",
-    "pack": "npm run compile-schemas && gnome-extensions pack --force .",
+    "pack": "npm run build && npm run compile-schemas && gnome-extensions pack --force .",
     "ext:install": "gnome-extensions install --force codeburn-gnome@bradtaniguchi.github.io.shell-extension.zip",
     "pack:install": "npm run pack && npm run ext:install",
-    "dev": "dbus-run-session -- sh -c \"gnome-shell --devkit & sleep 2 && gnome-extensions enable codeburn-gnome@bradtaniguchi.github.io; wait\"",    
+    "dev": "dbus-run-session -- sh -c \"gnome-shell --devkit & sleep 2 && gnome-extensions enable codeburn-gnome@bradtaniguchi.github.io; wait\"",
     "enable": "gnome-extensions enable codeburn-gnome@bradtaniguchi.github.io",
     "disable": "gnome-extensions disable codeburn-gnome@bradtaniguchi.github.io",
     "logs": "journalctl -f -o cat /usr/bin/gnome-shell",
@@ -18,6 +21,16 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
-    "eslint": "^9.0.0"
+    "@girs/adw-1": "^4.1.0",
+    "@girs/gio-2.0": "^4.1.0",
+    "@girs/glib-2.0": "^4.1.0",
+    "@girs/gnome-shell": "^50.0.4",
+    "@girs/gobject-2.0": "^4.1.0",
+    "@girs/gtk-4.0": "^4.1.0",
+    "@girs/st-15": "^4.1.0",
+    "esbuild": "^0.28.1",
+    "eslint": "^9.0.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.66.0"
   }
 }

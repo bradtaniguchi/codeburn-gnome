@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": [
+      "@girs/gnome-shell",
+      "@girs/st-15",
+      "@girs/gtk-4.0",
+      "@girs/adw-1",
+      "@girs/gio-2.0",
+      "@girs/glib-2.0",
+      "@girs/gobject-2.0"
+    ]
+  },
+  "include": ["src/**/*"]
+}
